@@ -1,0 +1,8 @@
+services:
+  web:
+    image: temperature-converter
+    build:
+      context: .
+      dockerfile: .docker/dockerfile
+    ports:
+      - "8080:80"

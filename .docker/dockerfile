@@ -1,0 +1,9 @@
+FROM nginx:1.28-alpine
+
+# Remove default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy your HTML file into nginx
+COPY src/index.html /usr/share/nginx/html/index.html
+
+EXPOSE 80
