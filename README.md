@@ -24,3 +24,13 @@ kubectl delete pod/my-converter
 - Reset Docker to use your local machine’s daemon
 `eval $(minikube docker-env -u)`
 
+## Kubernetes v2 - Deployment and service
+Running containers from YAML manifests.
+
+`kubectl apply -f .k8s`
+
+- Minikube runs Kubernetes inside a Docker container. Port 30080 is exposed on the Minikube node, not on localhost.
+
+`minikube service temperature-converter`
+
+`kubectl delete -f .k8s`
